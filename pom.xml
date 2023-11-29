@@ -11,6 +11,8 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>user/user</module>
+    <module>user/chat</module>
+      <module>user/message</module>
   </modules>
 
   <properties>
