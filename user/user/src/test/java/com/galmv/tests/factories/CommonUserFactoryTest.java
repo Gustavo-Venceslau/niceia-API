@@ -2,15 +2,22 @@ package com.galmv.tests.factories;
 
 import com.galmv.entities.User;
 import com.galmv.factories.CommonUserFactory;
+import com.galmv.factories.UserFactory;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 import static org.assertj.core.api.Assertions.*;
 
 public class CommonUserFactoryTest {
 
+    private final UserFactory factory;
+    public CommonUserFactoryTest(){
+        this.factory = new CommonUserFactory();
+    }
+
     @Test
     public void givenNewCommonUserInfo_whenUserIsCreatedByFactory_thenUserInfoMustBeNotNull(){
-        User user = new CommonUserFactory().createUser(
+        User user = factory.createUser(
                 "John Doe",
                 "john@mail.com",
                 "123",

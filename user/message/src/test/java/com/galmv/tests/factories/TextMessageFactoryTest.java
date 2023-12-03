@@ -12,7 +12,6 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.*;
 
 public class TextMessageFactoryTest {
-
     private final MessageFactory factory;
 
     public TextMessageFactoryTest(){
