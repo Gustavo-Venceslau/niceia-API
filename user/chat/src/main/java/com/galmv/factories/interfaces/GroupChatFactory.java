@@ -7,5 +7,5 @@ import com.galmv.entities.User;
 import java.util.List;
 
 public interface GroupChatFactory {
-    public GroupChat create(List<User> participants, List<Message> messages, List<User> admins, String name, String description, String photo, boolean archived);
+    public GroupChat createGroupChat(List<User> participants, List<Message> messages, List<User> admins, String name, String description, String photo, boolean archived);
 }

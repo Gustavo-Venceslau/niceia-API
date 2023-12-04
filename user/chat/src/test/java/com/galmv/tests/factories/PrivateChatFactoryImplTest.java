@@ -1,7 +1,7 @@
 package com.galmv.tests.factories;
 
+import com.galmv.entities.Chat;
 import com.galmv.entities.Message;
-import com.galmv.entities.PrivateChat;
 import com.galmv.entities.User;
 import com.galmv.factories.PrivateChatFactoryImpl;
 import com.galmv.factories.interfaces.PrivateChatFactory;
@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class PrivateChatFactoryImplTest {
 
-    private PrivateChatFactory factory;
+    private final PrivateChatFactory factory;
 
     public PrivateChatFactoryImplTest(){
         this.factory = new PrivateChatFactoryImpl();
@@ -25,7 +25,7 @@ public class PrivateChatFactoryImplTest {
         List<User> participants = new ArrayList<>();
         List<Message> messages = new ArrayList<>();
 
-        PrivateChat chat = factory.create(
+        Chat chat = factory.createPrivateChat(
             participants,
             messages
         );

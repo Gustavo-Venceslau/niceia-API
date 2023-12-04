@@ -14,12 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class GroupChatFactoryImplTest {
 
-    private final GroupChatFactory factory;
-
-
-    public GroupChatFactoryImplTest(){
-        this.factory = new GroupChatFactoryImpl();
-    }
+    private final GroupChatFactory factory = new GroupChatFactoryImpl();
 
     @Test
     public void givenNewChat_whenBuiltByFactory_thenChatMustBeNotNull(){
@@ -27,7 +22,7 @@ public class GroupChatFactoryImplTest {
         List<Message> messages = new ArrayList<>();
         List<User> admins = new ArrayList<>();
 
-        GroupChat chat = factory.create(
+        GroupChat chat = factory.createGroupChat(
                 participants,
                 messages,
                 admins,

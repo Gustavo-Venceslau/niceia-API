@@ -8,8 +8,19 @@ import com.galmv.factories.interfaces.GroupChatFactory;
 import java.util.List;
 
 public class GroupChatFactoryImpl implements GroupChatFactory {
+
     @Override
-    public GroupChat create(List<User> participants, List<Message> messages, List<User> admins, String name, String description, String photo, boolean archived) {
+    public GroupChat createGroupChat
+            (
+                    List<User> participants,
+                    List<Message> messages,
+                    List<User> admins,
+                    String name,
+                    String description,
+                    String photo,
+                    boolean archived
+            )
+    {
         return new GroupChat.Builder()
                 .setParticipants(participants)
                 .setMessages(messages)

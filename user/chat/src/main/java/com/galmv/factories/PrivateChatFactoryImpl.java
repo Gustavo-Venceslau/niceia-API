@@ -8,8 +8,9 @@ import com.galmv.factories.interfaces.PrivateChatFactory;
 import java.util.List;
 
 public class PrivateChatFactoryImpl implements PrivateChatFactory {
+
     @Override
-    public PrivateChat create(List<User> participants, List<Message> messages) {
+    public PrivateChat createPrivateChat(List<User> participants, List<Message> messages) {
         return new PrivateChat.Builder()
                 .setParticipants(participants)
                 .setMessages(messages)
