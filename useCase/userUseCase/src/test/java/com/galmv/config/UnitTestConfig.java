@@ -36,6 +36,6 @@ public abstract class UnitTestConfig {
 
     @AfterEach
     public void after(){
-        this.repository.delete(user.getId());
+        this.repository.deleteById(user.getId());
     }
 }

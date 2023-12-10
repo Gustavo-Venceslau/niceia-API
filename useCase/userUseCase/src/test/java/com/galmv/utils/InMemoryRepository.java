@@ -59,7 +59,7 @@ public class InMemoryRepository implements UserRepository {
     }
 
     @Override
-    public void delete(UUID userId) {
+    public void deleteById(UUID userId) {
         this.inMemoryDb.remove(userId);
     }
 }
