@@ -1,3 +1,5 @@
 package com.galmv.models;
 
-public record UserResponseModel(String name, String email, String password, String phone, String status, String photo) {}
+import java.util.UUID;
+
+public record UserResponseModel(UUID id, String name, String email, String password, String phone, String status, String photo) {}

@@ -1,4 +1,4 @@
-package com.galmv.findByName;
+package com.galmv.useCases.findByName;
 
 import com.galmv.models.UserResponseModel;
 
