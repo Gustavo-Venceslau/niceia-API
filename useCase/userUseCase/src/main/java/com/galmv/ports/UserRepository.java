@@ -9,10 +9,11 @@ import java.util.UUID;
 
 public interface UserRepository {
 
-    public Optional<User> findByName(final String name);
-    public Optional<User> findByEmail(final String email);
-    public User create(User request);
-    public UserResponseModel update(UUID userId, UserRequestModel request);
-    public void delete(UUID userId);
+    Optional<User> findByName(final String name);
+    Optional<User> findByEmail(final String email);
+    Optional<User> findById(final UUID userid);
+    User create(User request);
+    User update(User user);
+    void delete(UUID userId);
 
 }

@@ -1,11 +1,8 @@
 package com.galmv.utils;
 
-import com.galmv.models.UserRequestModel;
 import com.galmv.models.UserResponseModel;
 import com.galmv.ports.UserRepository;
 import com.galmv.user.entities.User;
-import com.galmv.user.factories.CommonUserFactory;
-import com.galmv.user.factories.UserFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,6 +32,14 @@ public class InMemoryRepository implements UserRepository {
     }
 
     @Override
+    public Optional<User> findById(UUID userId) {
+        Optional<User> optionalUser = inMemoryDb.values().stream()
+                .filter(user -> user.getId() == userId).findAny();
+
+        return optionalUser;
+    }
+
+    @Override
     public User create(User user) {
 
         inMemoryDb.put(user.getId(), user);
@@ -43,8 +48,14 @@ public class InMemoryRepository implements UserRepository {
     }
 
     @Override
-    public UserResponseModel update(UUID userId, UserRequestModel request) {
-        return null;
+    public User update(User user) {
+       this.inMemoryDb.put(user.getId(), user);
+
+       Optional<User> updatedUser = this.inMemoryDb.values().stream()
+               .filter(userToFind -> userToFind.getId() == user.getId())
+               .findAny();
+
+       return updatedUser.get();
     }
 
     @Override
