@@ -3,7 +3,7 @@ package com.galmv.useCases.deleteUser;
 import com.galmv.ports.UserRepository;
 import com.galmv.user.constants.Errors;
 import com.galmv.user.entities.User;
-import com.galmv.user.exceptions.custom.UserNotFoundException;
+import com.galmv.user.exceptions.UserNotFoundException;
 
 import java.util.Optional;
 import java.util.UUID;

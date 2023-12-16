@@ -5,7 +5,7 @@ import com.galmv.useCases.deleteUser.DeleteUser;
 import com.galmv.useCases.deleteUser.DeleteUserById;
 import com.galmv.user.constants.Errors;
 import com.galmv.user.entities.User;
-import com.galmv.user.exceptions.custom.UserNotFoundException;
+import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;

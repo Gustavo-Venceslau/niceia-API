@@ -7,7 +7,7 @@ import com.galmv.ports.PasswordEncoder;
 import com.galmv.useCases.updateUser.UpdateUser;
 import com.galmv.useCases.updateUser.UpdateUserUseCase;
 import com.galmv.user.constants.Errors;
-import com.galmv.user.exceptions.custom.UserNotFoundException;
+import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;

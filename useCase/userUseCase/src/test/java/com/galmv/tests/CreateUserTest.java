@@ -5,7 +5,7 @@ import com.galmv.models.UserRequestModel;
 import com.galmv.models.UserResponseModel;
 import com.galmv.ports.PasswordEncoder;
 import com.galmv.user.constants.Errors;
-import com.galmv.user.exceptions.custom.UserAlreadyExistsException;
+import com.galmv.user.exceptions.UserAlreadyExistsException;
 import com.galmv.useCases.createUser.CreateUser;
 import com.galmv.useCases.createUser.CreateUserUseCase;
 import org.junit.jupiter.api.Test;

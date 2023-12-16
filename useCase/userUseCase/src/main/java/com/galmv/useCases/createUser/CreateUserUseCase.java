@@ -7,7 +7,7 @@ import com.galmv.ports.UserRepository;
 import com.galmv.presenters.UserPresenter;
 import com.galmv.user.constants.Errors;
 import com.galmv.user.entities.User;
-import com.galmv.user.exceptions.custom.UserAlreadyExistsException;
+import com.galmv.user.exceptions.UserAlreadyExistsException;
 import com.galmv.user.factories.CommonUserFactory;
 
 import java.util.Optional;

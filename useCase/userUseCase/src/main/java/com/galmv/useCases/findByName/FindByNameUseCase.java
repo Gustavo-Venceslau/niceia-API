@@ -5,7 +5,7 @@ import com.galmv.models.UserResponseModel;
 import com.galmv.presenters.UserPresenter;
 import com.galmv.user.constants.Errors;
 import com.galmv.user.entities.User;
-import com.galmv.user.exceptions.custom.UserNotFoundException;
+import com.galmv.user.exceptions.UserNotFoundException;
 
 import java.util.Optional;
 
@@ -20,7 +20,7 @@ public class FindByNameUseCase implements FindByName{
     }
 
     @Override
-    public UserResponseModel find(String name) {
+    public UserResponseModel findBy(String name) {
         Optional<User> optionalUser = repository.findByName(name);
 
         if(optionalUser.isEmpty()) throw new UserNotFoundException(Errors.USER_NOT_FOUND);
