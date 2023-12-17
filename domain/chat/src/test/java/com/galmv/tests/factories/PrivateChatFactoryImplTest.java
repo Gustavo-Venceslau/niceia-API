@@ -1,10 +1,10 @@
 package com.galmv.tests.factories;
 
 import com.galmv.chat.entities.Chat;
+import com.galmv.chat.factories.ChatFactory;
+import com.galmv.chat.factories.ChatFactoryImpl;
 import com.galmv.message.entities.Message;
 import com.galmv.user.entities.User;
-import com.galmv.chat.factories.PrivateChatFactoryImpl;
-import com.galmv.chat.factories.interfaces.PrivateChatFactory;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,10 +14,10 @@ import static org.assertj.core.api.Assertions.*;
 
 public class PrivateChatFactoryImplTest {
 
-    private final PrivateChatFactory factory;
+    private final ChatFactory factory;
 
     public PrivateChatFactoryImplTest(){
-        this.factory = new PrivateChatFactoryImpl();
+        this.factory = new ChatFactoryImpl();
     }
 
     @Test

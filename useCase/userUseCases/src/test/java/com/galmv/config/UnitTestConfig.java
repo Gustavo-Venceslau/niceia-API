@@ -1,6 +1,5 @@
 package com.galmv.config;
 
-import com.galmv.models.UserResponseModel;
 import com.galmv.ports.UserRepository;
 import com.galmv.presenters.UserPresenter;
 import com.galmv.presenters.UserPresenterViewer;

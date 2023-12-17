@@ -11,9 +11,11 @@
     <file url="file://$PROJECT_DIR$/domain/user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/useCase/chatUseCases/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/useCase/chatUseCases/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/useCase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/useCase/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/useCase/userUseCase/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/useCase/userUseCase/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/useCase/userUseCases/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/useCase/userUseCases/src/main/resources" charset="UTF-8" />
   </component>
 </project>

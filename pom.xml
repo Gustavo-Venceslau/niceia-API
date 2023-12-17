@@ -13,7 +13,8 @@
     <module>domain/user</module>
     <module>domain/chat</module>
     <module>domain/message</module>
-    <module>useCase/userUseCase</module>
+    <module>useCase/userUseCases</module>
+    <module>useCase/chatUseCases</module>
   </modules>
 
   <properties>

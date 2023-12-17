@@ -1,10 +1,10 @@
 package com.galmv.tests.factories;
 
 import com.galmv.chat.entities.GroupChat;
+import com.galmv.chat.factories.ChatFactory;
+import com.galmv.chat.factories.ChatFactoryImpl;
 import com.galmv.message.entities.Message;
 import com.galmv.user.entities.User;
-import com.galmv.chat.factories.GroupChatFactoryImpl;
-import com.galmv.chat.factories.interfaces.GroupChatFactory;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class GroupChatFactoryImplTest {
 
-    private final GroupChatFactory factory = new GroupChatFactoryImpl();
+    private final ChatFactory factory = new ChatFactoryImpl();
 
     @Test
     public void givenNewChat_whenBuiltByFactory_thenChatMustBeNotNull(){
