@@ -6,7 +6,7 @@ import com.galmv.models.UserResponseModel;
 import com.galmv.ports.PasswordEncoder;
 import com.galmv.useCases.updateUser.UpdateUser;
 import com.galmv.useCases.updateUser.UpdateUserUseCase;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;
 
@@ -57,6 +57,6 @@ public class UpdateUserTest extends UnitTestConfig {
         );
 
         assertThatExceptionOfType(UserNotFoundException.class).isThrownBy(() ->
-                this.updateUserUseCase.executeWith(UUID.randomUUID(), newData)).withMessage(Errors.USER_NOT_FOUND_TO_UPDATE);
+                this.updateUserUseCase.executeWith(UUID.randomUUID(), newData)).withMessage(UserErrors.USER_NOT_FOUND_TO_UPDATE);
     }
 }

@@ -4,7 +4,7 @@ import com.galmv.ports.AuthenticationManager;
 import com.galmv.ports.UserRepository;
 import com.galmv.useCases.login.model.AuthenticationRequest;
 import com.galmv.useCases.login.model.AuthenticationResponse;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.entities.User;
 import com.galmv.user.exceptions.UserInvalidCredentialsException;
 
@@ -23,7 +23,7 @@ public class LoginUseCase implements UserLogin {
     public AuthenticationResponse loginBy(AuthenticationRequest credentials) {
         Optional<User> userFound = this.repository.findByEmail(credentials.email());
 
-        if(userFound.isEmpty()) throw new UserInvalidCredentialsException(Errors.USER_INVALID_CREDENTIALS);
+        if(userFound.isEmpty()) throw new UserInvalidCredentialsException(UserErrors.USER_INVALID_CREDENTIALS);
 
         AuthenticationResponse token = this.authentication.authenticate(credentials);
 

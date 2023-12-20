@@ -5,7 +5,7 @@ import com.galmv.useCases.findByName.FindByName;
 import com.galmv.useCases.findByName.FindByNameUseCase;
 import com.galmv.models.UserRequestModel;
 import com.galmv.models.UserResponseModel;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +43,6 @@ public class FindByNameTest extends UnitTestConfig {
     @Test
     public void givenAInvalidUsername_whenFoundByName_thenThrowAnException(){
         assertThatExceptionOfType(UserNotFoundException.class).isThrownBy(() ->
-                this.findByName.findBy("invalid")).withMessage(Errors.USER_NOT_FOUND);
+                this.findByName.findBy("invalid")).withMessage(UserErrors.USER_NOT_FOUND);
     }
 }

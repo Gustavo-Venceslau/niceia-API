@@ -4,7 +4,7 @@ import com.galmv.config.UnitTestConfig;
 import com.galmv.models.UserRequestModel;
 import com.galmv.models.UserResponseModel;
 import com.galmv.ports.PasswordEncoder;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserAlreadyExistsException;
 import com.galmv.useCases.createUser.CreateUser;
 import com.galmv.useCases.createUser.CreateUserUseCase;
@@ -57,6 +57,6 @@ public class CreateUserTest extends UnitTestConfig {
         this.repository.create(user);
 
         assertThatExceptionOfType(UserAlreadyExistsException.class).isThrownBy(() ->
-                this.createUserUseCase.create(requestModel)).withMessage(Errors.USER_ALREADY_EXISTS);
+                this.createUserUseCase.create(requestModel)).withMessage(UserErrors.USER_ALREADY_EXISTS);
     }
 }

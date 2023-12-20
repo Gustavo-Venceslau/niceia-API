@@ -5,7 +5,7 @@ import com.galmv.models.UserResponseModel;
 import com.galmv.ports.PasswordEncoder;
 import com.galmv.ports.UserRepository;
 import com.galmv.presenters.UserPresenter;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.entities.User;
 import com.galmv.user.exceptions.UserAlreadyExistsException;
 import com.galmv.user.factories.CommonUserFactory;
@@ -28,7 +28,7 @@ public class CreateUserUseCase implements CreateUser{
     public UserResponseModel create(UserRequestModel request) {
         Optional<User> optionalUser = this.repository.findByEmail(request.email());
 
-        if(optionalUser.isPresent()) throw new UserAlreadyExistsException(Errors.USER_ALREADY_EXISTS);
+        if(optionalUser.isPresent()) throw new UserAlreadyExistsException(UserErrors.USER_ALREADY_EXISTS);
 
         User userToSave = new CommonUserFactory().createUser(
                 request.name(),

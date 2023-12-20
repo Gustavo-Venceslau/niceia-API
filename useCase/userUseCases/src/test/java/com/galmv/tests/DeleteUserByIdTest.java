@@ -3,7 +3,7 @@ package com.galmv.tests;
 import com.galmv.config.UnitTestConfig;
 import com.galmv.useCases.deleteUser.DeleteUser;
 import com.galmv.useCases.deleteUser.DeleteUserById;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.entities.User;
 import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;
@@ -33,6 +33,6 @@ public class DeleteUserByIdTest extends UnitTestConfig {
     @Test
     public void givenInvalidUserId_whenTryToDelete_thenMustThrowException(){
         assertThatExceptionOfType(UserNotFoundException.class).isThrownBy(() ->
-                this.deleteUserUseCase.executeWith(UUID.randomUUID())).withMessage(Errors.USER_NOT_FOUND_TO_DELETE);
+                this.deleteUserUseCase.executeWith(UUID.randomUUID())).withMessage(UserErrors.USER_NOT_FOUND_TO_DELETE);
     }
 }

@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UnitTestConfig {
+public abstract class UnitTestConfig {
 
     protected final ChatRepository repository;
 

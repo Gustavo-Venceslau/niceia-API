@@ -6,7 +6,7 @@ import com.galmv.useCases.login.LoginUseCase;
 import com.galmv.useCases.login.UserLogin;
 import com.galmv.useCases.login.model.AuthenticationRequest;
 import com.galmv.useCases.login.model.AuthenticationResponse;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserInvalidCredentialsException;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ public class LoginTest extends UnitTestConfig {
                 if(credentials.email().equals(user.getEmail()) && credentials.password().equals(user.getPassword())){
                     return new AuthenticationResponse("correct");
                 }
-                throw new UserInvalidCredentialsException(Errors.USER_INVALID_CREDENTIALS);
+                throw new UserInvalidCredentialsException(UserErrors.USER_INVALID_CREDENTIALS);
             }
         };
         this.login = new LoginUseCase(repository, authentication);
@@ -44,7 +44,7 @@ public class LoginTest extends UnitTestConfig {
         AuthenticationRequest request = new AuthenticationRequest("joh@mail.com", "123");
 
         assertThatExceptionOfType(UserInvalidCredentialsException.class).isThrownBy(() ->
-                login.loginBy(request)).withMessage(Errors.USER_INVALID_CREDENTIALS);
+                login.loginBy(request)).withMessage(UserErrors.USER_INVALID_CREDENTIALS);
     }
 
     @Test
@@ -52,6 +52,6 @@ public class LoginTest extends UnitTestConfig {
         AuthenticationRequest request = new AuthenticationRequest("john@mail.com", "1234");
 
         assertThatExceptionOfType(UserInvalidCredentialsException.class).isThrownBy(() ->
-                login.loginBy(request)).withMessage(Errors.USER_INVALID_CREDENTIALS);
+                login.loginBy(request)).withMessage(UserErrors.USER_INVALID_CREDENTIALS);
     }
 }

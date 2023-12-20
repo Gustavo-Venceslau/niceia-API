@@ -5,5 +5,5 @@ import com.galmv.user.entities.User;
 
 import java.util.List;
 
-public record ChatResponseModel(List<User> participants, List<Message> messages) {
+public record PrivateChatResponseModel(List<User> participants, List<Message> messages) {
 }

@@ -1,7 +1,7 @@
 package com.galmv.useCases.findByName;
 
-import com.galmv.models.ChatResponseModel;
+import com.galmv.models.GroupChatResponseModel;
 
 public interface FindByName {
-    ChatResponseModel findBy(String name);
+    GroupChatResponseModel findBy(String name);
 }

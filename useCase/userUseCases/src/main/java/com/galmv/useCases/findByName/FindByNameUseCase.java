@@ -3,7 +3,7 @@ package com.galmv.useCases.findByName;
 import com.galmv.ports.UserRepository;
 import com.galmv.models.UserResponseModel;
 import com.galmv.presenters.UserPresenter;
-import com.galmv.user.constants.Errors;
+import com.galmv.user.constants.UserErrors;
 import com.galmv.user.entities.User;
 import com.galmv.user.exceptions.UserNotFoundException;
 
@@ -23,7 +23,7 @@ public class FindByNameUseCase implements FindByName{
     public UserResponseModel findBy(String name) {
         Optional<User> optionalUser = repository.findByName(name);
 
-        if(optionalUser.isEmpty()) throw new UserNotFoundException(Errors.USER_NOT_FOUND);
+        if(optionalUser.isEmpty()) throw new UserNotFoundException(UserErrors.USER_NOT_FOUND);
 
         return presenter.prepareSuccessView(optionalUser.get());
     }
