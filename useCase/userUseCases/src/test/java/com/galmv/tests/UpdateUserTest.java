@@ -1,11 +1,11 @@
 package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
-import com.galmv.models.UserRequestModel;
-import com.galmv.models.UserResponseModel;
-import com.galmv.ports.PasswordEncoder;
-import com.galmv.useCases.updateUser.UpdateUser;
-import com.galmv.useCases.updateUser.UpdateUserUseCase;
+import com.galmv.user.models.UserRequestModel;
+import com.galmv.user.models.UserResponseModel;
+import com.galmv.user.ports.PasswordEncoder;
+import com.galmv.user.useCases.updateUser.UpdateUser;
+import com.galmv.user.useCases.updateUser.UpdateUserUseCase;
 import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;

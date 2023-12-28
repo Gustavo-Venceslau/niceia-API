@@ -3,6 +3,7 @@ module chatUseCasesTest {
     exports com.galmv.config;
 
     requires chatUseCase;
+    requires useCase.userUseCase;
     requires galmv.domain.chat;
     requires galmv.domain.message;
     requires galmv.domain.user;

@@ -2,14 +2,14 @@ package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
 import com.galmv.message.entities.Message;
-import com.galmv.models.GroupChatRequestModel;
-import com.galmv.models.GroupChatResponseModel;
-import com.galmv.models.PrivateChatRequestModel;
-import com.galmv.models.PrivateChatResponseModel;
-import com.galmv.presenters.ChatPresenter;
-import com.galmv.presenters.ChatPresenterView;
-import com.galmv.useCases.createChat.CreateChat;
-import com.galmv.useCases.createChat.CreateChatUseCase;
+import com.galmv.chat.models.GroupChatRequestModel;
+import com.galmv.chat.models.GroupChatResponseModel;
+import com.galmv.chat.models.PrivateChatRequestModel;
+import com.galmv.chat.models.PrivateChatResponseModel;
+import com.galmv.chat.presenters.ChatPresenter;
+import com.galmv.chat.presenters.ChatPresenterView;
+import com.galmv.chat.useCases.createChat.CreateChat;
+import com.galmv.chat.useCases.createChat.CreateChatUseCase;
 import com.galmv.user.entities.User;
 import org.junit.jupiter.api.Test;
 

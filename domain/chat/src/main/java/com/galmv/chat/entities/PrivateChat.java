@@ -9,7 +9,7 @@ import java.util.UUID;
 public class PrivateChat extends Chat{
 
     private PrivateChat(Builder builder) {
-        super(builder.participants, builder.messages);
+        super(builder.participants, builder.messages, builder.archived);
     }
 
     @Override
@@ -37,9 +37,14 @@ public class PrivateChat extends Chat{
         this.messages.add(message);
     }
 
+    public void setArchived(boolean archived){
+        this.archived = archived;
+    }
+
     public static class Builder{
         private List<User> participants;
         private List<Message> messages;
+        private boolean archived;
 
         public Builder setParticipants(List<User> participants) {
             this.participants = participants;
@@ -48,6 +53,11 @@ public class PrivateChat extends Chat{
 
         public Builder setMessages(List<Message> messages) {
             this.messages = messages;
+            return this;
+        }
+
+        public Builder setArchived(boolean archived){
+            this.archived = archived;
             return this;
         }
 

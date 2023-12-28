@@ -4,7 +4,7 @@ import com.galmv.chat.entities.GroupChat;
 import com.galmv.chat.entities.PrivateChat;
 import com.galmv.chat.factories.ChatFactoryImpl;
 import com.galmv.message.entities.Message;
-import com.galmv.ports.ChatRepository;
+import com.galmv.chat.ports.ChatRepository;
 import com.galmv.user.entities.User;
 import com.galmv.utils.ChatInMemoryRepository;
 import org.junit.jupiter.api.AfterEach;

@@ -1,11 +1,11 @@
 package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
-import com.galmv.ports.AuthenticationManager;
-import com.galmv.useCases.login.LoginUseCase;
-import com.galmv.useCases.login.UserLogin;
-import com.galmv.useCases.login.model.AuthenticationRequest;
-import com.galmv.useCases.login.model.AuthenticationResponse;
+import com.galmv.user.ports.AuthenticationManager;
+import com.galmv.user.useCases.login.LoginUseCase;
+import com.galmv.user.useCases.login.UserLogin;
+import com.galmv.user.useCases.login.model.AuthenticationRequest;
+import com.galmv.user.useCases.login.model.AuthenticationResponse;
 import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserInvalidCredentialsException;
 import org.junit.jupiter.api.Test;

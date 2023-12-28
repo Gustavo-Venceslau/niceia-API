@@ -1,13 +1,13 @@
 package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
-import com.galmv.models.UserRequestModel;
-import com.galmv.models.UserResponseModel;
-import com.galmv.ports.PasswordEncoder;
+import com.galmv.user.models.UserRequestModel;
+import com.galmv.user.models.UserResponseModel;
+import com.galmv.user.ports.PasswordEncoder;
 import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserAlreadyExistsException;
-import com.galmv.useCases.createUser.CreateUser;
-import com.galmv.useCases.createUser.CreateUserUseCase;
+import com.galmv.user.useCases.createUser.CreateUser;
+import com.galmv.user.useCases.createUser.CreateUserUseCase;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

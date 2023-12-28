@@ -12,11 +12,13 @@ public abstract class Chat {
     protected UUID id;
     protected final List<User> participants;
     protected final List<Message> messages;
+    protected boolean archived;
 
-    public Chat(List<User> participants, List<Message> messages) {
+    public Chat(List<User> participants, List<Message> messages, boolean archived) {
         this.id = UUID.randomUUID();
         this.participants = participants;
         this.messages = messages;
+        this.archived = archived;
     }
 
     public abstract UUID getId();

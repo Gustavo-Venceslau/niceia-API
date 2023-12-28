@@ -12,7 +12,6 @@ public class GroupChat extends Chat{
     private String name;
     private String description;
     private String photo;
-    private boolean archived;
 
     @Override
     public UUID getId() {
@@ -75,17 +74,14 @@ public class GroupChat extends Chat{
         return archived;
     }
 
-    public void setArchived(boolean archived) {
-        this.archived = archived;
-    }
+    public void setArchived(boolean archived) { this.archived = archived; }
 
     private GroupChat(Builder builder){
-        super(builder.participants, builder.messages);
+        super(builder.participants, builder.messages, builder.archived);
         this.admins = builder.admins;
         this.name = builder.name;
         this.description = builder.description;
         this.photo = builder.photo;
-        this.archived = builder.archived;
     }
 
     public static class Builder{

@@ -1,8 +1,8 @@
 package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
-import com.galmv.useCases.deleteUser.DeleteUser;
-import com.galmv.useCases.deleteUser.DeleteUserById;
+import com.galmv.user.useCases.deleteUser.DeleteUser;
+import com.galmv.user.useCases.deleteUser.DeleteUserById;
 import com.galmv.user.constants.UserErrors;
 import com.galmv.user.entities.User;
 import com.galmv.user.exceptions.UserNotFoundException;

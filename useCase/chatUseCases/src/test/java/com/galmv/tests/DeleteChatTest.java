@@ -4,8 +4,8 @@ import com.galmv.chat.constants.ChatErrors;
 import com.galmv.chat.entities.Chat;
 import com.galmv.chat.exceptions.ChatNotFoundException;
 import com.galmv.config.UnitTestConfig;
-import com.galmv.useCases.deleteChat.DeleteChat;
-import com.galmv.useCases.deleteChat.DeleteChatUseCase;
+import com.galmv.chat.useCases.deleteChat.DeleteChat;
+import com.galmv.chat.useCases.deleteChat.DeleteChatUseCase;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;

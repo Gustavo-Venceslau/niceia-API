@@ -1,11 +1,11 @@
 package com.galmv.config;
 
-import com.galmv.ports.UserRepository;
-import com.galmv.presenters.UserPresenter;
-import com.galmv.presenters.UserPresenterViewer;
+import com.galmv.user.ports.UserRepository;
+import com.galmv.user.presenters.UserPresenter;
+import com.galmv.user.presenters.UserPresenterViewer;
 import com.galmv.user.entities.User;
 import com.galmv.user.factories.CommonUserFactory;
-import com.galmv.utils.InMemoryRepository;
+import com.galmv.utils.UserInMemoryRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -15,7 +15,7 @@ public abstract class UnitTestConfig {
     protected final UserPresenter presenter;
 
     public UnitTestConfig(){
-        this.repository = new InMemoryRepository();
+        this.repository = new UserInMemoryRepository();
         this.presenter = new UserPresenterViewer();
     }
 

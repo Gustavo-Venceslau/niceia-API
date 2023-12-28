@@ -1,10 +1,10 @@
 package com.galmv.tests;
 
 import com.galmv.config.UnitTestConfig;
-import com.galmv.useCases.findByName.FindByName;
-import com.galmv.useCases.findByName.FindByNameUseCase;
-import com.galmv.models.UserRequestModel;
-import com.galmv.models.UserResponseModel;
+import com.galmv.user.useCases.findByName.FindByName;
+import com.galmv.user.useCases.findByName.FindByNameUseCase;
+import com.galmv.user.models.UserRequestModel;
+import com.galmv.user.models.UserResponseModel;
 import com.galmv.user.constants.UserErrors;
 import com.galmv.user.exceptions.UserNotFoundException;
 import org.junit.jupiter.api.Test;

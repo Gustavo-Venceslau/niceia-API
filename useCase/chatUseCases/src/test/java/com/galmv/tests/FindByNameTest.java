@@ -2,12 +2,12 @@ package com.galmv.tests;
 
 import com.galmv.chat.constants.ChatErrors;
 import com.galmv.chat.exceptions.ChatNotFoundException;
+import com.galmv.chat.useCases.findByName.FindByName;
+import com.galmv.chat.useCases.findByName.FindByNameUseCase;
 import com.galmv.config.UnitTestConfig;
-import com.galmv.models.GroupChatResponseModel;
-import com.galmv.presenters.ChatPresenter;
-import com.galmv.presenters.ChatPresenterView;
-import com.galmv.useCases.findByName.FindByName;
-import com.galmv.useCases.findByName.FindByNameUseCase;
+import com.galmv.chat.models.GroupChatResponseModel;
+import com.galmv.chat.presenters.ChatPresenter;
+import com.galmv.chat.presenters.ChatPresenterView;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

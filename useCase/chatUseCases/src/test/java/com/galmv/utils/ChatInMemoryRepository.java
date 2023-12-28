@@ -2,12 +2,10 @@ package com.galmv.utils;
 
 import com.galmv.chat.entities.Chat;
 import com.galmv.chat.entities.GroupChat;
-import com.galmv.ports.ChatRepository;
+import com.galmv.chat.ports.ChatRepository;
+import com.galmv.user.entities.User;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 public class ChatInMemoryRepository implements ChatRepository {
 
@@ -33,10 +31,34 @@ public class ChatInMemoryRepository implements ChatRepository {
     }
 
     @Override
+    public List<Chat> findAllByUser(UUID userId) {
+        List<Chat> chats = new ArrayList<>();
+
+        for(Chat chat: inMemoryDb.values()){
+            for(User user: chat.getParticipants()){
+                if(user.getId().equals(userId) && !chats.contains(chat)) chats.add(chat);
+            }
+        }
+
+        return chats;
+    }
+
+    @Override
     public Chat create(Chat chat) {
         inMemoryDb.put(chat.getId(), chat);
 
         return chat;
+    }
+
+    @Override
+    public Chat addUserToChat(UUID chatId, User user) {
+        Chat chatToAdd = inMemoryDb.get(chatId);
+
+        chatToAdd.addParticipants(user);
+
+        inMemoryDb.put(chatId, chatToAdd);
+
+        return chatToAdd;
     }
 
     @Override
