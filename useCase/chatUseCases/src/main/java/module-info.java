@@ -6,6 +6,9 @@ module chatUseCase{
     exports com.galmv.chat.useCases.findAllByUser;
     exports com.galmv.chat.useCases.findAllByUser.models;
     exports com.galmv.chat.useCases.findAllByUser.presenters;
+    exports com.galmv.chat.useCases.findAllMessages;
+    exports com.galmv.chat.useCases.findAllMessages.model;
+    exports com.galmv.chat.useCases.findAllMessages.presenters;
     exports com.galmv.chat.ports;
     exports com.galmv.chat.presenters;
     exports com.galmv.chat.models;
