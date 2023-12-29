@@ -16,4 +16,5 @@ public interface ChatRepository {
     Chat addUserToChat(UUID chatId, User user);
     Chat update(Chat chat);
     void deleteById(UUID chatId);
+    void deleteChatUserById(UUID chatId, UUID userId);
 }

@@ -72,4 +72,15 @@ public class ChatInMemoryRepository implements ChatRepository {
     public void deleteById(UUID chatId) {
         inMemoryDb.remove(chatId);
     }
+
+    @Override
+    public void deleteChatUserById(UUID chatId, UUID userId) {
+        Chat chat = this.inMemoryDb.get(chatId);
+
+        Optional<User> userFound = chat.getParticipants().stream().filter(user -> user.getId().equals(userId)).findAny();
+
+        chat.getParticipants().remove(userFound.get());
+
+        inMemoryDb.put(chatId, chat);
+    }
 }
