@@ -11,6 +11,8 @@ module chatUseCase{
     exports com.galmv.chat.useCases.findAllMessages.presenters;
     exports com.galmv.chat.useCases.removeChatUser;
     exports com.galmv.chat.useCases.removeChatUser.models;
+    exports com.galmv.chat.useCases.addChatUser;
+    exports com.galmv.chat.useCases.addChatUser.models;
     exports com.galmv.chat.ports;
     exports com.galmv.chat.presenters;
     exports com.galmv.chat.models;
